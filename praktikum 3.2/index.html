@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav style="border: 2px solid black">
+      <div style="padding: 10px">
+        <a href="#" style="text-decoration: none; color: black">Home |</a>
+        <a
+          href="#"
+          style="
+            text-decoration: none;
+            color: black;
+            margin-left: 20px;
+            margin-left: 50px;
+          "
+          >Generate Link |</a
+        >
+        <a
+          href="#"
+          style="
+            text-decoration: none;
+            color: black;
+            margin-left: 50px;
+            margin-right: 50px;
+          "
+          >Transaction History |</a
+        >
+        <a
+          href="#"
+          style="text-decoration: none; color: black; margin-left: 30px"
+          >Policy |</a
+        >
+        <a
+          href="#"
+          style="
+            text-decoration: none;
+            color: black;
+            margin-left: 20px;
+            margin-left: 30px;
+            float: right;
+          "
+          >Logout |</a
+        >
+      </div>
+    </nav>
+    <div
+      style="
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 40px;
+        float: left;
+      "
+    >
+      <div>
+        <img src="img/mac.jpg" alt="mac" />
+        <br />
+        <input type="button" value="Upload picture" />
+      </div>
+    </div>
+    <div style="margin-left: 30px; margin-top: 40px">
+      <table cellpadding="8px">
+        <form action="done.html" method="get">
+          <tr>
+            <td>
+              <label for="title"
+                >Title here: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+              >
+            </td>
+            <td><input type="text" value="Macbook air" /></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="d">Description: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            </td>
+            <td>
+              <input
+                name="d"
+                id=""
+                cols="30"
+                rows="5"
+                value="year: 200xx"
+                style="height: 70px"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="ac">Account number:</label></td>
+            <td>
+              <input type="number" name="ac" id="ac" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="bank">Bank: </label></td>
+            <td>
+              <select name="bank" id="bank">
+                <option value="bca">bca</option>
+                <option value="mandiri">mandiri</option>
+                <option value="nimb">nimb</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="hol">Account Holder</label></td>
+            <td>
+              <input type="text" name="hol" id="hol" placeholder="Name here" />
+            </td>
+          </tr>
+          <tr>
+            <td>Transaction:</td>
+            <td>
+              <input type="number" name="nub" id="nub" min="1" max="3" /> <br />
+              if the Transaction is for 3 person, choose 3 from the drop-down
+              list
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="ya"
+                ><input type="checkbox" name="ya" id="ya" checked />Send to
+                mobile phone</label
+              >
+              <br />
+              <label for="ya"
+                ><input type="checkbox" name="sin" id="sin" checked />send to
+                email</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td><label for="send">Send to mobile phone</label></td>
+            <td><input type="tel" name="send" id="send" /></td>
+          </tr>
+          <tr>
+            <td><label for="mob">Send to mobile phone:</label></td>
+            <td><input type="email" name="mob" id="mob" /></td>
+          </tr>
+          <tr>
+            <td><br /></td>
+            <td>
+              <input
+                type="submit"
+                value="Generate Nobr Link"
+                style="
+                  background-color: green;
+                  color: wheat;
+                  border: 1px solid black;
+                "
+              />
+            </td>
+          </tr>
+        </form>
+      </table>
+    </div>
+  </body>
+</html>
