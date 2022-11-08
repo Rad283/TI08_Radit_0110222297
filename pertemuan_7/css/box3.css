@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  margin: 10px;
+  justify-content: space-around;
+}
+
+.box1 {
+  background-color: #f4eb49;
+  width: 20%;
+  height: 100px;
+}
+.box2 {
+  background-color: #ff6624;
+  width: 78%;
+  height: 100px;
+}
+.box3 {
+  background-color: #aedd94;
+  width: 20%;
+  height: 400px;
+}
+.box4 {
+  background-color: #d1d6db;
+  width: 58%;
+}
+.box5 {
+  background-color: #4dd7fa;
+  width: 19%;
+  height: 400px;
+}
+.foot {
+  width: 99%;
+  height: 60px;
+  background-color: #1464f6;
+}
