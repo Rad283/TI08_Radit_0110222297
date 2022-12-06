@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body style="margin-left: 20px;">
+    <h1>Halaman Validasi form</h1>
+   
+    <table>
+        <tr>
+        <td><label for="">Nama pelanggan</label></td>
+        <td><input type="text" id="nama"> <span id="salahnama" style="color: red;"></span></td>
+    </tr>
+     <tr>
+        <td><label for="">Email</label></td>
+       <td> <input type="text" name="" id="email" > <span id="salahemail" style="color: red;"></span></td>
+    </tr>
+    <tr>
+      <td>  <label for="">Jam keberangkatan</label></td>
+       <td> <input type="text" name="" id="waktu"> <span id="salahwaktu" style="color: red;"></span></td>
+    </tr>
+      <tr>
+       <td> <label for="">tujuan keberangkatan</label></td>
+        <td><input type="text" name="" id="tujuan"> <span id="salahtujuan" style="color:red;"></span></td>
+    </tr>
+    <tr>
+       <td> <label for="">Jumlah tiket</label> </td>
+        <td><input type="number" name="" id="tiket"> <span id="salahtiket" style="color: red;"></span></td>
+    </tr>
+    </table>
+        <button onclick="validasi()">Kirim</button>
+        <br>
+        <br>
+        <br>
+  <fieldset style="width: 400px;">
+    <legend>Tiket anda</legend>
+        <p id="cetak">belum ada, mohon masukan data dengan benar</p>
+    </fieldset>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Tujuan yang tersedia: jakarta , hongkong , newyork , beijing</p>
+    <script>
+        function validasi(){
+
+            let benar1=0
+            let benar2=0
+            let benar3=0
+            let benar4=0
+            let benar5=0
+
+            let emailha=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            let waktuha=/^([0-1]?[0-9]|2[0-4]):([0-5][0-9])(:[0-5][0-9])?$/
+            let tujuanha=['jakarta','hongkong','newyork','beijing']
+
+            let nama = document.getElementById('nama').value
+            let email = document.getElementById('email').value
+            let waktu = document.getElementById('waktu').value
+            let tujuan = document.getElementById('tujuan').value
+            let tiket = parseInt(document.getElementById('tiket').value)
+            let salahnama = document.getElementById('salahnama')
+            let salahemail= document.getElementById('salahemail')
+            let salahwaktu = document.getElementById('salahwaktu')
+            let salahtujuan= document.getElementById('salahtujuan')
+            let salahtiket = document.getElementById('salahtiket')
+
+            if (nama.length <= 30&&nama.length>0){
+                salahnama.innerHTML=""
+                benar1=1
+
+            }else{
+                salahnama.innerHTML="Nama kosong atau lebih dari 30 character!!"
+                benar1=0
+            }
+
+            if (email.match(emailha)){
+                salahemail.innerHTML=""
+                benar2=1
+            }else{
+                salahemail.innerHTML="salah email"
+                benar2=0
+            }
+
+            if (waktu.match(waktuha)){
+                salahwaktu.innerHTML=""
+                benar3=1
+            }else{
+                salahwaktu.innerHTML="Waktu salah"
+                benar3=0
+            }
+            
+            if(tujuanha.includes(tujuan)){
+                salahtujuan.innerHTML=""
+                benar4=1
+            }else{
+                salahtujuan.innerHTML="salah tujuan"
+                benar4=0
+            }
+            if(tiket>0 && tiket <= 10){
+                salahtiket.innerHTML=""
+                benar5=1
+            }else{
+                salahtiket.innerHTML="salah tiket"
+                benar5=0
+            }
+
+            if(benar1==1&&benar2==1&&benar3==1&&benar4==1&&benar5==1){
+                document.getElementById('cetak').innerHTML="Nama:  "+nama+"<br>Email:  "+email+
+                "<br>Jam keberangkatan:  "+waktu+"<br>Tujuan:  "+tujuan+"<br>Jumlah tiket: "+tiket
+            }else{
+                document.getElementById('cetak').innerHTML="belum ada, mohon masukan data dengan benar"
+
+            }
+         
+        }
+    </script>
+</body>
+</html>

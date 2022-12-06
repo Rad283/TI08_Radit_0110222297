@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+</head>
+<body>
+    <h1>Kalkulator penjumlahan</h1>
+    <label for="bilangan">Bilangan 1</label>
+    <input type="number" name="bilangan1" id="bilangan1">
+    <br>
+    <label for="bilangan2">Bilangan 2</label>
+    <input type="number" name="bilangan2" id="bilangan2">
+    <br>
+    <label for="pilih">Pilih operasi Aritmatika:</label>
+    <input type="radio" name="operasi" value="tambah" id="tambah">
+    <label for="">+</label>
+    <input type="radio" name="operasi" value="kurang" id="kurang">
+    <label for="">-</label>
+    <input type="radio" name="operasi" value="bagi" id="bagi">
+    <label for="">:</label>
+    <input type="radio" name="operasi" value="kali" id="kali">
+    <label for="">*</label>
+
+
+
+    <br>
+    <button onclick="hitung()">Hitung</button>
+    <p>Hasil penjumlahan <span id="hasil">0</span></p>
+
+<script>
+    function hitung(){
+        let bilangan1=document.getElementById('bilangan1').value
+        let bilangan2=document.getElementById('bilangan2').value
+        let hasil=document.getElementById('hasil')
+        if(document.getElementById('tambah').checked==true){
+            hasil.innerHTML=parseInt(bilangan1)+parseInt(bilangan2)
+        }else if(document.getElementById('kurang').checked==true){
+            hasil.innerHTML=parseInt(bilangan1)-parseInt(bilangan2)
+        }else if(document.getElementById('bagi').checked==true){
+            hasil.innerHTML=parseInt(bilangan1)/parseInt(bilangan2)
+        }else if(document.getElementById('kali').checked==true){
+            hasil.innerHTML=parseInt(bilangan1)*parseInt(bilangan2)
+        }
+       
+        
+        
+        
+    }
+</script>
+
+</body>
+</html>
